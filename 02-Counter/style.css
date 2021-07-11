@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* #counter{
+} */
+
+:root{
+    --lightBlue : hsl(206deg 33% 96%);
+    --fontColor : hsl(209deg 61% 16%);
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+#counter h1{
+    font-size: 70px;
+    color: var(--fontColor);
+}
+#counter .number h1{
+    font-size: 120px;
+    font-weight: 500;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--lightBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container div{
+    margin: 10px;
+}
+
+#counter .btn{
+    font-family: 'Open Sans', sans-serif;
+    padding: 7px 25px;
+    margin: 10px 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border-radius: 7px;
+    background-color: transparent;
+    border: 3px solid var(--fontColor);
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    transition-property: background-color, color;    
+}
+
+#counter .btn:hover{
+    background-color: var(--fontColor);
+    color: white;
+}
+
+@media screen and (max-width : 768px) {
+    #counter h1{
+        font-size: 60px;
+    }
+    #counter .number h1{
+        font-size: 90px;
+    }
+
+    #counter .btn{
+        padding: 7px 7px;
+    margin: 10px 3px;
+    font-size: 13px;
+    }
+}

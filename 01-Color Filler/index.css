@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(206deg 33% 96%);
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.heading h3 {
+    font-size: 20px;
+    color: hsl(206deg 82% 61%);
+}
+
+.options a {
+    color: hsl(0deg 0% 13%);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.options a:hover {
+    color: hsl(206deg 82% 61%);
+}
+
+span {
+    color: hsl(206deg 82% 61%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.color {
+    text-align: center;
+}
+
+.color h1 {
+    background-color: hsl(0deg 0% 13%);
+    color: white;
+    padding: 15px 10px;
+    font-size: 35px;
+    border-radius: 10px;
+}
+
+.btn {
+    font-size: 25px;
+    padding: 10px 20px;
+    color: hsl(0deg 0% 13%);
+    border: 2px solid hsl(0deg 0% 13%);
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}

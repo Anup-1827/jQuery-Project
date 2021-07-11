@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('hero.jpeg'); 
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 50%;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.card h1{
+    color: hsl(209deg 61% 16%);
+    font-size: 60px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.card .btn{
+    background-color: hsl(205deg 78% 60%);
+    font-size: 15px;
+    padding: 7px 15px;
+    border: 2px solid hsl(205deg 78% 60%);
+    color: white;
+    letter-spacing: 4px;
+    border-radius: 10px;
+    text-transform: Uppercase;
+}
+
+.card .btn:hover{
+    color: hsl(205deg 78% 60%);
+    background-color: white;
+    border: 2px solid hsl(205deg 78% 60%);
+    /* transition: background-color ease-in 0.3s, color ease-in 0.3s; */
+    transition: color, background-color ease-in 0.3s;
+    cursor: pointer;
+}

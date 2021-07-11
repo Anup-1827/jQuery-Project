@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(210, 36%, 96%);
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 30px;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+.hamburger .bar{
+    width: 30px;
+    height: 5px;
+    /* border: 10px solid hsl(205deg 78% 60%);  */
+    background-color:hsl(205deg 78% 60%);
+    border-radius: 10px;
+    position: relative;
+    animation: zoomBar 2s ease infinite;
+}
+
+.hamburger .bar::before,
+.hamburger .bar::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:hsl(205deg 78% 60%);   
+    border-radius: 10px;
+}
+
+.hamburger .bar::after{
+    top: 10px;
+}
+
+.hamburger .bar::before{
+    top: -10px;
+}
+
+/* Animation */
+@keyframes zoomBar{
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* Side Bar */
+.side{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+.show-side-bar{
+    width: 400px;
+    transition: width 0.3s ease;
+}
+
+.side-bar{
+    /* padding: 20px; */
+    height: 100vh;
+}
+.side-bar .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-bar .header h1{
+    text-shadow: 3px 2px #b4b4b4;
+    font-size: 30px;
+}
+
+.side-bar .header h1 span{
+    color: hsl(205deg 78% 60%);
+}
+
+.side-bar .header .cross{
+    padding: 20px;
+    cursor: pointer;
+}
+.side-bar .header .cross .crossBar{
+    background-color: hsl(0deg 67% 44%);
+    width: 30px;
+    height: 5px;
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+.side-bar .header .cross .crossBar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: hsl(0deg 67% 44%);
+    transform: rotate(90deg);
+}
+
+.side-bar .nav-bar a{
+    display: block;
+    text-decoration: none;
+    color: #7c7979;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    /* margin: 20px 0; */
+    padding: 20px;
+}
+
+.side-bar .nav-bar a:hover{
+    background-color: hsl(205deg 78% 60%);
+}   
+
+
