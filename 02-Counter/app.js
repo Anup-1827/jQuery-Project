@@ -1,31 +1,25 @@
-let count = 0;
+$(document).ready(function(){
+  let count = 0;
 
-const btns = document.querySelectorAll('.btn');
-const value = document.querySelector('#value');
-
-btns.forEach( (btn)=>{
-btn.addEventListener('click', (e)=>{
-  const  classes = e.currentTarget.classList; 
-  if(classes.contains('decrease')){
+  $('.decrease').on('click',()=>{
     count--;
-  }
-  else if(classes.contains('increase')){
+    $('#value').text(count);
+    if(count < 0){
+      $('#value').css('color','red');
+    }
+  })
+  
+  $('.increase').on('click',()=>{
     count++;
-  }
-  else{
-      count = 0;
-  }
-  value.textContent = count;
+    $('#value').text(count);
+    if(count > 0){
+      $('#value').css('color','green');
+    }
+  })
 
-  if(count < 0){
-    value.style.color = "red";
-  }
-  else if(count > 0){
-    value.style.color = "green";
-  }
-  else{
-    value.style.color = "black";
-  }
-})
-
+  $('.reset').on('click',()=>{
+    count = 0;
+    $('#value').text(count).css('color','black');
+  })
+  
 })
