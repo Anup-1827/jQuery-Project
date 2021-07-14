@@ -37,64 +37,42 @@ const reviews = [
     },
   ];
 
-// Select Items
-let img =document.getElementById('image');
-let name =document.getElementById('name');
-let profession =document.getElementById('profession');
-let text =document.getElementById('text');
 
-// Select Button
-let prevButton = document.querySelector('.prev-button');
-let nextButton = document.querySelector('.next-button');
-let randomButton = document.querySelector('.btn');
+let currentItem = 0;
 
-let contentItem = 0;
-
-// Initial Load Person
-window.addEventListener("DOMContentLoaded",()=>{
-    let index = reviews[contentItem];
-    img.src=  index.img;
-    name.textContent = index.name;
-    profession.textContent =index.job;
-    text.textContent = index.text;
-});
-
-// Show Person
-function showPerson(person){
-    let index = reviews[contentItem];
-    img.src=  index.img;
-    name.textContent = index.name;
-    profession.textContent =index.job;
-    text.textContent = index.text;
+let showPerson =()=>{
+  const index = reviews[currentItem];
+  const image = index.img;
+  const name = index.name;
+  const profession = index.job;
+  const text = index.text;
+  $('#image').attr('src', image);
+  $('#name').text(name);
+  $('#profession').text(profession);
+  $('#text').text(text);
 }
-
-
-// Previous Button
-prevButton.addEventListener('click', ()=>{
-if(contentItem< 0){
-    contentItem = reviews.length -1;
-}
-else{
-    contentItem--;
-    
-}
-showPerson(contentItem);
-});
 
 // Next Button
-nextButton.addEventListener('click', ()=>{
-    if(contentItem < reviews.length){
-       contentItem++;
-    }
-    else{
-        contentItem =0;
-    }
-    showPerson(contentItem);
-});
+$('.next-button').on('click',()=>{
+   currentItem++;
+   if(currentItem > reviews.length -1){
+     currentItem = 0;
+   }
+   showPerson();
+})
 
-// Random Button
-randomButton.addEventListener('click', ()=>{
-    contentItem= Math.floor(Math.random() * reviews.length);
-    console.log(contentItem);
-    showPerson(contentItem); 
-});
+// Previous Button
+$('.prev-button').on('click',()=>{
+  currentItem--;
+  if(currentItem < 0){
+    currentItem = reviews.length -1;
+  }
+  showPerson();
+})
+
+// Random Person
+$('.btn').on('click', ()=>{
+  currentItem = Math.floor(Math.random()*reviews.length);
+  console.log(currentItem);
+  showPerson();
+})
