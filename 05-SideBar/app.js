@@ -1,14 +1,16 @@
-const hamburger = document.querySelector('.hamburger');
-const cross = document.querySelector('.cross');
 
-const side = document.querySelector('.side');
-
-hamburger.addEventListener('click', ()=>{
-    side.classList.add("show-side-bar");
-
+$('.hamburger').on('click', ()=>{
+    $('.side').toggleClass('show-side-bar');
 });
 
-cross.addEventListener('click', ()=>{
-    side.classList.remove("show-side-bar");
+// $('.hamburger').on('click',()=>{
+//     if($('.side').hasClass('show-side-bar')){
+//         $('.side').removeClass('show-side-bar');
+//     }else{
+//         $('.side').addClass('show-side-bar');
+//     }
+// })
 
-});
+$('.cross').on('click',()=>{
+    $('.side').removeClass('show-side-bar');
+})
