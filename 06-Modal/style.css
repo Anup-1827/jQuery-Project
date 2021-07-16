@@ -6,6 +6,8 @@
 
 body{
     background-image: url('hero.jpeg'); 
+    background-image: cover;
+    position: relative;
 }
 
 .container{
@@ -52,3 +54,55 @@ body{
     transition: color, background-color ease-in 0.3s;
     cursor: pointer;
 }
+
+.window{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width:0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(43, 138, 226, 0.658);
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+.modal{
+    width: 50%;
+    height: 40%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.cross{
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    width: 30px;
+    height: 4px;
+    background-color: red;
+    transform: rotate(45deg);
+}
+.cross:hover{
+    cursor: pointer;
+}
+
+.cross::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    transform: rotate(90deg);
+}
+
+.add{
+ width:100%
+}
+
