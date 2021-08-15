@@ -1,0 +1,135 @@
+:root{
+    --blue : hsl(206deg 33% 96%);
+    --heading : hsl(209deg 61% 16%);
+    --brown : hsl(36deg 47% 57%);
+    --info:hsl(210, 22%, 49%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--blue);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.OurMenu{
+    width: 250px;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    color: var(--heading);
+    font-size: 25px;
+    border-bottom: 7px solid var(--brown);
+}
+
+
+ button{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: var(--brown);
+    background-color: transparent;
+    border: 1px solid var(--brown);
+    border-radius: 2px;
+    margin: 10px;
+    transition: background-color 0.8s ease;
+    padding: 7px;
+}
+
+button:hover{
+    color: white;
+    background-color: var(--brown);
+    
+}
+
+#btn-container{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+img{
+    width : 400px;
+    height: 200px;
+    border: 7px solid var(--brown);
+    border-radius: 4px;
+}
+
+.itemsContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu{
+    width : 400px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 3px;
+    padding: 5px 0;
+    border-bottom: 1px dotted black;
+}
+
+.name{
+    text-transform: uppercase;
+}
+.info-container h2:nth-child(2){
+    color: var(--brown);
+}
+
+.items-info{
+    color: var(--info);
+    font-weight: 100;
+    padding-top: 15px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-family:sans-serif;
+
+}
+
+@media only screen and (min-width : 700px) {
+    .OurMenu{
+        margin-top: 5%;
+    }
+    .itemsContainer{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    img{
+        width : 250px;
+        height: 150px;
+        margin-right: 10px;
+    }
+
+    .menu{
+        width: 80%;
+        display: flex;
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width : 800px) {
+    .menu{
+        width: 700px;
+    }
+}
+
+@media only screen and (min-width : 1100px) {
+    .menu{
+        width: 40%;
+    }
+    .itemsContainer{
+        justify-content: flex-start;
+    }
+}

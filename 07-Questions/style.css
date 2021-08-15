@@ -1,0 +1,61 @@
+body{
+    background-color:hsl(206deg 33% 96%);
+}
+.container{
+    height: 100vh;
+    width: 100%;
+}
+
+.heading{
+    color:hsl(36deg 47% 57%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.card{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+.subcontainer{
+    display: flex;
+    justify-content: space-between;
+}
+.p{
+    font-family: 'Lucida Sans', sans-serif;
+    letter-spacing: 3px;
+}
+.sign{
+    width: 15px;
+    height: 3px;
+    background-color:hsl(36deg 47% 57%);
+    position: relative;
+    transition: width 0.5s,height 0.5s, transform 0.5s;
+    /* border: 2px solid hsl(36deg 47% 57%); */
+}
+.sign:hover{
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+.minus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 3px;
+    transform: rotate(90deg);
+    background-color: hsl(36deg 47% 57%);
+}
+.info{
+    padding: 20px;
+    letter-spacing: 2px;
+    display: none;
+}
+.show{
+  display: block !important;
+}
+.hide{
+    display: none;
+}
